@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Google Icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Usuarios</h1>
+            <div>
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times hide"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="filters hide">
+            <!-- Filter by -->
+            <div class="filter">
+                <p>Filtrar por:</p>
+                <select name="filter-field" id="filter-field">
+                    <option value="first-name">Nombre</option>
+                    <option value="last-name">Apellido</option>
+                    <option value="age">Edad</option>
+                </select>
+                <input type="text">
+            </div>
+            <!-- Order by -->
+            <div class="order">
+                <p>Ordenar por:</p>
+                <select name="order-field" id="order-field">
+                    <optgroup label="Nombre">
+                        <option value="first-name-asc">Nombre ascendente</option>
+                        <option value="first-name-desc">Nombre descendente</option>
+                    </optgroup>
+                    <optgroup label="Apellido">
+                        <option value="last-name-asc">Apellido ascendente</option>
+                        <option value="last-name-desc">Apellido descendente</option>
+                    </optgroup>
+                    <optgroup label="Edad">
+                        <option value="age-asc">Edad ascendente</option>
+                        <option value="age-desc">Edad descendente</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="card-adition">
+                <p>Tarjetas:</p>
+
+                <input type="number" name="add-card" id="add-card">
+
+                <button>Agregar</button>
+                <button>Resetear</button>
+
+            </div>
+            <div class="card-display">
+                <p>Disposición:</p>
+
+                <button><i class="fas fa-th-list"></i></button>
+                <button><i class="fas fa-th-large"></i></button>
+
+            </div>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <img src="images/coding.jpg" alt="">
+                <div class="card-main-content">
+                    <h4>Rellihan, Sebastián Gabriel</h4>
+                    <p><i class="far fa-envelope"></i> srellihan@gmail.com</p>
+                    <p><i class="far fa-calendar-alt"></i> 08/08/2000 (edad: 20)</p>
+                </div>
+                <div class="card-aditional-content hide">
+                    <p><i class="fas fa-map-pin"></i> Congreve 800</p>
+                    <p><i class="fas fa-map-marked-alt"></i> Loma Verde, Escobar, Argentina (1625)</p>
+                    <p><i class="far fa-calendar-alt"></i> 07/07/2021</p>
+                    <p><i class="fas fa-mobile-alt"></i> 1167416930</p>
+                </div>
+                <div class="card-actions">
+                    <button class="card-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="card-detail-open">Ver más <i class="fas fa-caret-down"></i></button>
+                    <button class="card-detail-close hide">Ver menos <i class="fas fa-caret-up"></i></button>
+                    <button class="card-move-l-btn">
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                    <button class="card-move-r-btn">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© Copyright 2021, Sebastián Rellihan</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

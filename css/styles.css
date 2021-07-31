@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+h1, h4 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    min-height: 55px;
+    margin-bottom: 10px;
+}
+
+button,
+input,
+select,
+option {
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+/* *********** HEADER *********** */
+
+header {
+    background-color: salmon;
+}
+    header > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+        header h1 {
+            margin: 10px;
+        }
+        header > div div {
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+/* *********** MAIN *********** */
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1600px;
+    align-self: center;
+}
+
+/* Filters  */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filters>div {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: salmon;
+    border-radius: 8px;
+}
+
+.filter select {
+    width: 30%;
+}
+.filter input {
+    width: 65%;
+}
+.order select {
+    width: 100%;
+}
+.card-adition input,
+.card-adition button {
+    width: 30%;
+}
+
+
+.card-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+    .card-display p {
+        width: 100%;
+    }
+    .card-display button {
+        width: 30px;
+        height: 30px;
+    }
+/* Cards */
+.card {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: salmon;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    word-wrap: break-word;
+}
+.card:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+}
+    .card img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .card-main-content,
+    .card-aditional-content {
+        padding-left: 5%;
+    }
+    .card-main-content p,
+    .card-aditional-content p {
+        margin: 5px 0;
+    }
+    .card-actions {
+        text-align: center;
+    }
+        .card-close-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+        }
+        .card-detail-open,
+        .card-detail-close {
+            margin: 10px 0;
+        }
+        .card-move-l-btn,
+        .card-move-r-btn,
+        .card-close-btn {
+            position: absolute;
+            width: 30px;
+            margin: 10px 10px;
+        }
+        .card-move-l-btn {
+            bottom: 0;
+            left: 0;
+        }
+        .card-move-r-btn {
+            bottom: 0;
+            right: 0;
+        }
+
+/* *********** FOOTER *********** */
+
+footer {
+    background-color: salmon;
+    text-align: center;
+}
+
+footer p {
+    height: 50px;
+    padding: 15px 0;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+        .card,
+        .filters > div {
+            width: 45%;
+            margin: calc(10%/4)
+        }
+}
+
+@media (min-width: 768px) {
+    .card,
+    .filters > div {
+        width: 25%;
+        margin: calc(25%/6)
+    }
+}
+
+@media (min-width: 1024px) {
+    .card,
+    .filters > div {
+        width: 20%;
+        margin: calc(20%/8)
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 15%;
+        margin: calc(25%/10)
+    }
+}
